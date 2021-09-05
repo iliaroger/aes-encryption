@@ -48,6 +48,7 @@ rl.question(
         );
         console.log('\r');
         rl.close();
+        process.exit(0);
       }
     }
   }
