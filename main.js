@@ -6,8 +6,6 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-let messageType = '';
-
 rl.question(
   'Do you want to encrypt or decrypt? (e = encrypt, d = decrypt):',
   function (answer) {
@@ -21,7 +19,6 @@ rl.question(
               console.log('\r\nYour encrypted text:');
               console.log(cypherText);
               console.log('\r');
-              messageType = 'encrypted';
               rl.close();
               process.exit(0);
             });
@@ -38,7 +35,6 @@ rl.question(
             console.log('\r\nYour decrypted text:');
             console.log(decypheredText);
             console.log('\r');
-            messageType = 'decrypted';
             rl.close();
             process.exit(0);
           });
